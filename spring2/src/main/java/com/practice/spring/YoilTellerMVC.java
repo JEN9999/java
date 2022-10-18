@@ -6,13 +6,16 @@ import java.util.Calendar;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class YoilTellerMVC {
-    @RequestMapping("/getYoilMVC") // http://localhost:8080/ch2/getYoilMVC?year=2021&month=10&day=1
+    @RequestMapping("/getYoilMVC") // http://localhost:8080/spring/getYoilMVC?year=2021&month=10&day=1
     //    public static void main(String[] args) {
 //    public void main(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    public String main(int year,int month ,int day, Model model) throws IOException {
+    public String main(@RequestParam(required=true)int year,
+    		@RequestParam(required=true)int month ,
+    		@RequestParam(required=true)int day, Model model) throws IOException {
 
     	//1.유효성검사
     	if(!isValid(year,month,day))

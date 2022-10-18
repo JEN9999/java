@@ -11,7 +11,7 @@ public class Hello {
 	int iv = 10; //인스턴스 변수
 	static int cv = 20; //static 변수
 	//2. url과 메서드를 연결
-	@RequestMapping("/hello")
+	@RequestMapping("/hellooo")
 	public void main() {   //인스턴스 메서드로 하는 이유. 
 		System.out.println("hellooooo");
 		int[] arr = {3,2,0,1,4};

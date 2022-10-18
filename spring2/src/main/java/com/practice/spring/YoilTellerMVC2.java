@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class YoilTellerMVC2 {
-    @RequestMapping("/getYoilMVC2") // http://localhost:8080/ch2/getYoilMVC?year=2021&month=10&day=1
+    @RequestMapping("/getYoilMVC2") // http://localhost:8080/spring/getYoilMVC?year=2022&month=10&day=1
     //    public static void main(String[] args) {
 //    public void main(HttpServletRequest request, HttpServletResponse response) throws IOException {
     public ModelAndView main(int year,int month ,int day) throws IOException {

@@ -9,7 +9,7 @@
 <h1>
 	Hello world!  
 </h1>
-
-<P> ${year }년 ${month }월${day }일은  ${yoil }입니다.</P>
+year = <%=request.getParameter("year") %>
+<P> ${myDate.year}년 ${myDate.month}월${myDate.day}일은  ${yoil}입니다.</P>
 </body>
 </html>
