@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,7 +31,7 @@ public class LoginController {
 	}
 	
 	@PostMapping("login")
-	public String login(String id, String pwd,String toURL, boolean rememberId,HttpServletRequest request, HttpServletResponse response) throws Exception {
+	public String login(@CookieValue("id") String cookieId,String id, String pwd,String toURL, boolean rememberId,HttpServletRequest request, HttpServletResponse response) throws Exception {
 		System.out.println("id="+id);
 		System.out.println("pwd="+pwd);
 		System.out.println("rememberId="+rememberId);
